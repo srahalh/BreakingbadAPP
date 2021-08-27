@@ -30,12 +30,11 @@ function App() {
 
   //Llamada API
   const consultarAPI = async () =>{
-    const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+    const api = await fetch('https://breakingbadapi.com/api/quote/random')
     const frase = await api.json();
     setFrase(frase[0])
 
   } 
-
   //State de Frase
   const [frase, setFrase] = useState({});
 
